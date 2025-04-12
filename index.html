@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>luckyxd</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #111;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #fff3;
+      text-align: center;
+      position: relative;
+    }
+    .username {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .discord-box {
+      background: #2b2b2b;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .discord-box span {
+      color: #ccc;
+      font-size: 14px;
+    }
+    .join-btn {
+      background: #2ecc71;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .socials {
+      margin-top: 20px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    .player {
+      margin-top: 40px;
+      background: #222;
+      border-radius: 15px;
+      padding: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 166px;
+      border: none;
+      border-radius: 12px;
+    }
+    .firework {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      animation: explode 1s ease-out forwards;
+    }
+    @keyframes explode {
+      0% { transform: translate(0, 0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="GJrfwh9akAA9E9h.jpg" alt="pfp" style="width:100px;height:100px;border-radius:50%;object-fit:cover;">
+    <div class="username">luckyxd <span>💎⭐</span></div>
+    <div class="discord-box">
+      <span>luckyxd — thanks everyone</span>
+      <a class="join-btn" href="https://linktr.ee/luckyboymusic?utm_source=linktree_profile_share&ltsid=7a09b0f1-bc75-4499-bf0e-e662e6f8399f" target="_blank">join</a>
+    </div>
+    <div class="socials">
+      <a href="https://soundcloud.com/luckyboy-trap" target="_blank">🎵</a>
+      <a href="#">🎧</a>
+      <a href="#">📸</a>
+      <a href="#">💬</a>
+      <a href="#">💰</a>
+    </div>
+    <div class="player">
+      <strong>luckyxd — in the moon (deluxe)</strong><br><br>
+      <iframe scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/luckyboy-trap/sets/in-the-moon-deluxe&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+    </div>
+  </div>
+  <script>
+    function createFirework() {
+      const firework = document.createElement('div');
+      firework.className = 'firework';
+      firework.style.left = Math.random() * window.innerWidth + 'px';
+      firework.style.top = Math.random() * window.innerHeight + 'px';
+      firework.style.setProperty('--x', (Math.random() - 0.5) * 200 + 'px');
+      firework.style.setProperty('--y', (Math.random() - 0.5) * 200 + 'px');
+      document.body.appendChild(firework);
+      setTimeout(() => document.body.removeChild(firework), 1000);
+    }
+    setInterval(createFirework, 200);
+  </script>
+</body>
+</html>
